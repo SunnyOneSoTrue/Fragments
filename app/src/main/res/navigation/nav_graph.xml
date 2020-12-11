@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sashinaodavaleba.Fragments.HomeFragment"
+        tools:layout="@layout/fragment_home"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.example.sashinaodavaleba.Fragments.DashboardFragment"
+        tools:layout="@layout/fragment_dashboard"
+        android:label="DashboardFragment" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.sashinaodavaleba.Fragments.NotificationFragment"
+        tools:layout="@layout/fragment_notification"
+        android:label="NotificationFragment"/>
+        <argument android:name="amount"
+            app:argType="integer"
+            android:defaultValue="0"
+        />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.sashinaodavaleba.Fragments.SettingsFragment"
+        tools:layout="@layout/fragment_settings"
+        android:label="SettingsFragment" />
+</navigation>
